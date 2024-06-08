@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "test deck 1",
+    "cards": [
+      {
+        "description": "test description 1",
+        "definition": "test definition 1"
+      },
+      {
+        "description": "test description 2",
+        "definition": "test definition 2"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "test deck 2",
+    "cards": [
+      {
+        "description": "test description 3",
+        "definition": "test definition 3"
+      },
+      {
+        "description": "test description 4",
+        "definition": "test definition 4"
+      }
+    ]
+  }
+]
