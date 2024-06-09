@@ -5,7 +5,7 @@ import { Deck } from "./types";
 
 export async function getData() {
   const file = await fs.readFile(
-    process.cwd() + "/app/data/cards.json",
+    process.cwd() + "/src/app/data/cards.json",
     "utf8"
   );
   const data = JSON.parse(file);
