@@ -1,57 +1,39 @@
 [
   {
     "id": 1,
-    "name": "test deck 1",
+    "name": "Conditional Statements",
     "cards": [
       {
-        "id": 1,
-        "description": "test description 1",
-        "definition": "test definition 1"
+        "front": "If P, then Q",
+        "back": "P => Q"
       },
       {
-        "id": 2,
-        "description": "test description 2",
-        "definition": "test definition 2"
+        "front": "Q if P",
+        "back": "P => Q"
       },
       {
-        "id": 3,
-        "description": "test description 3",
-        "definition": "test definition 3"
+        "front": "P only if Q",
+        "back": "P => Q"
       },
       {
-        "id": 4,
-        "description": "test description 4",
-        "definition": "test definition 4"
+        "front": "P implies Q",
+        "back": "P => Q"
       },
       {
-        "id": 5,
-        "description": "test description 5",
-        "definition": "test definition 5"
+        "front": "Q is implied by P",
+        "back": "P => Q"
       },
       {
-        "id": 6,
-        "description": "test description 6",
-        "definition": "test definition 6"
+        "front": "Q whenever P",
+        "back": "P => Q"
       },
       {
-        "id": 7,
-        "description": "test description 7",
-        "definition": "test definition 7"
+        "front": "Q is necessary for P",
+        "back": "P => Q"
       },
       {
-        "id": 8,
-        "description": "test description 8",
-        "definition": "test definition 8"
-      },
-      {
-        "id": 9,
-        "description": "test description 9",
-        "definition": "test definition 9"
-      },
-      {
-        "id": 10,
-        "description": "test description 10",
-        "definition": "test definition 10"
+        "front": "P is sufficient for Q",
+        "back": "P => Q"
       }
     ]
   }

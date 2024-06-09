@@ -29,7 +29,7 @@ export function CardSwitcher(props: { cards: Card[] }) {
   }, [shouldShuffle]);
 
   useEffect(() => {
-    setFlippedCards(Array(numCards).fill(!shouldFlip));
+    setFlippedCards(Array(numCards).fill(shouldFlip));
   }, [shouldFlip]);
 
   return (
@@ -66,7 +66,7 @@ export function CardSwitcher(props: { cards: Card[] }) {
             newCards[selectedIndex] = !flippedCards[selectedIndex];
             setFlippedCards(newCards);
           }}
-          key={cards[selectedIndex].definition}
+          key={selectedIndex}
           card={cards[selectedIndex]}
         />
         <IconButton

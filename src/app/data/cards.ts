@@ -37,8 +37,8 @@ export async function getDeck(id: number): Promise<Deck | undefined> {
       cards: deck.cards.map((card) => {
         return {
           id: card.id,
-          description: card.description,
-          definition: card.definition,
+          front: card.front,
+          back: card.back,
         };
       }),
     };

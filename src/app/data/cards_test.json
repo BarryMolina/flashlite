@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "name": "test deck 1",
+    "cards": [
+      {
+        "front": "test front 1",
+        "back": "test back 1"
+      },
+      {
+        "front": "test front 2",
+        "back": "test back 2"
+      },
+      {
+        "front": "test front 3",
+        "back": "test back 3"
+      },
+      {
+        "front": "test front 4",
+        "back": "test back 4"
+      },
+      {
+        "front": "test front 5",
+        "back": "test back 5"
+      },
+      {
+        "front": "test front 6",
+        "back": "test back 6"
+      },
+      {
+        "front": "test front 7",
+        "back": "test back 7"
+      },
+      {
+        "front": "test front 8",
+        "back": "test back 8"
+      },
+      {
+        "front": "test front 9",
+        "back": "test back 9"
+      },
+      {
+        "front": "test front 10",
+        "back": "test back 10"
+      }
+    ]
+  }
+]

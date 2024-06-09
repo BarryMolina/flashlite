@@ -1,11 +1,11 @@
 export interface Card {
-  id: number;
-  description: string;
-  definition: string;
+  id?: number;
+  front: string;
+  back: string;
 }
 
 export interface Deck {
-  id: number;
+  id?: number;
   name: string;
   cards?: Card[];
 }
