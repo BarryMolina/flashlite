@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 export const cardSchema = z.object({
+  id: z.number(),
   description: z.string(),
   definition: z.string(),
 });

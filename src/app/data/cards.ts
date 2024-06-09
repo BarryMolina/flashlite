@@ -1,6 +1,7 @@
 import "server-only";
 import { promises as fs } from "fs";
 import { deckListSchema } from "./schema";
+import { Deck } from "./types";
 
 export async function getData() {
   const file = await fs.readFile(
@@ -27,7 +28,7 @@ export async function getDecks() {
   });
 }
 
-export async function getDeck(id: number) {
+export async function getDeck(id: number): Promise<Deck | undefined> {
   const decks = await getData();
   const deck = decks.find((d) => d.id === id);
   if (deck !== undefined) {
@@ -36,6 +37,7 @@ export async function getDeck(id: number) {
       name: deck.name,
       cards: deck.cards.map((card) => {
         return {
+          id: card.id,
           description: card.description,
           definition: card.definition,
         };
