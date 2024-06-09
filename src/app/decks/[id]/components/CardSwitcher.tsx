@@ -65,8 +65,8 @@ export function CardSwitcher(props: { cards: Card[] }) {
   }
 
   return (
-    <div className="flex flex-col gap-4 items-center">
-      <div className="flex justify-between w-[500px] items-center">
+    <div className="flex flex-col gap-4 max-w-[500px] w-full">
+      <div className="flex justify-between items-center">
         <IconButton
           active={shouldFlip}
           onClick={() => setShouldFlip(!shouldFlip)}
@@ -81,16 +81,16 @@ export function CardSwitcher(props: { cards: Card[] }) {
           <ShuffleIcon />
         </IconButton>
       </div>
-      <div className="flex justify-center items-center gap-10">
+      <FlashCard
+        flipped={flippedCards[selectedIndex]}
+        toggleFlipped={() => toggleFlipped(selectedIndex)}
+        key={selectedIndex}
+        card={cards[selectedIndex]}
+      />
+      <div className="flex justify-center gap-8">
         <IconButton onClick={prev}>
           <PrevIcon />
         </IconButton>
-        <FlashCard
-          flipped={flippedCards[selectedIndex]}
-          toggleFlipped={() => toggleFlipped(selectedIndex)}
-          key={selectedIndex}
-          card={cards[selectedIndex]}
-        />
         <IconButton onClick={next}>
           <NextIcon />
         </IconButton>
