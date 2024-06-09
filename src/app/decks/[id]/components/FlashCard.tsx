@@ -8,7 +8,7 @@ export function FlashCard(props: {
 }) {
   return (
     <button
-      className="min-h-[300px] p-10 border flex items-center justify-center drop-shadow-md bg-white w-full"
+      className="min-h-[300px] p-10 border flex items-center justify-center bg-white w-full shadow-md"
       onClick={props.toggleFlipped}
     >
       <h3 className="text-md sm:text-lg">
