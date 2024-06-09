@@ -1,16 +1,9 @@
 import "server-only";
-import { promises as fs } from "fs";
 import { deckListSchema } from "./schema";
 import { Deck } from "./types";
 import data from "./cards.json";
 
 export async function getData() {
-  // const file = await fs.readFile(
-  // process.cwd() + "/src/app/data/cards.json",
-  // process.cwd() + "/public/cards.json",
-  // "utf8"
-  // );
-  // const data = JSON.parse(file);
   const decks = deckListSchema.parse(data);
   return decks;
 }
