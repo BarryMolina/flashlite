@@ -1,57 +1,57 @@
 [
   {
     "id": 1,
-    "name": "Necessity and Sufficiency",
+    "name": "test deck 1",
     "cards": [
       {
         "id": 1,
-        "description": "Definition of Necessity",
-        "definition": "A necessary condition is one that must be present for another condition to occur. If P is true, then Q must be true."
+        "description": "test description 1",
+        "definition": "test definition 1"
       },
       {
         "id": 2,
-        "description": "Definition of Sufficiency",
-        "definition": "A sufficient condition is one that, if met, guarantees that another condition occurs. If P is true, then Q is guaranteed to be true."
+        "description": "test description 2",
+        "definition": "test definition 2"
       },
       {
         "id": 3,
-        "description": "Example of Necessity",
-        "definition": "Being a male is a necessary condition for being a brother."
+        "description": "test description 3",
+        "definition": "test definition 3"
       },
       {
         "id": 4,
-        "description": "Example of Sufficiency",
-        "definition": "A number being divisible by 4 is sufficient for it to be even."
+        "description": "test description 4",
+        "definition": "test definition 4"
       },
       {
         "id": 5,
-        "description": "Necessary and Sufficient Condition",
-        "definition": "A condition that is both necessary and sufficient means that the condition is true if and only if another condition is true."
+        "description": "test description 5",
+        "definition": "test definition 5"
       },
       {
         "id": 6,
-        "description": "Example of Necessary and Sufficient Condition",
-        "definition": "Today being the Fourth of July is necessary and sufficient for today being Independence Day in the United States."
+        "description": "test description 6",
+        "definition": "test definition 6"
       },
       {
         "id": 7,
-        "description": "Relation in Conditional Statements",
-        "definition": "In 'if P, then Q', Q is necessary for P and P is sufficient for Q."
+        "description": "test description 7",
+        "definition": "test definition 7"
       },
       {
         "id": 8,
-        "description": "Example of Conditional Necessity",
-        "definition": "For John to be a bachelor, it is necessary that he is unmarried, male, and an adult."
+        "description": "test description 8",
+        "definition": "test definition 8"
       },
       {
         "id": 9,
-        "description": "Example of Conditional Sufficiency",
-        "definition": "If John is a king, it is sufficient to conclude that he is male."
+        "description": "test description 9",
+        "definition": "test definition 9"
       },
       {
         "id": 10,
-        "description": "Duality in Necessity and Sufficiency",
-        "definition": "Necessity and sufficiency are dual to each other; if N is necessary for S, then S is sufficient for N."
+        "description": "test description 10",
+        "definition": "test definition 10"
       }
     ]
   }

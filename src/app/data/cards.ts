@@ -10,7 +10,6 @@ export async function getData() {
   );
   const data = JSON.parse(file);
   const decks = deckListSchema.parse(data);
-  console.log("decks", decks);
   return decks;
 }
 
