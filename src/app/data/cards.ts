@@ -1,4 +1,3 @@
-import "server-only";
 import { promises as fs } from "fs";
 import { deckListSchema } from "./schema";
 import { Deck } from "./types";
