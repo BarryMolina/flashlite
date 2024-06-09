@@ -8,10 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      animation: {
+        shake: "shake 450ms ease-in-out",
+      },
+      keyframes: {
+        shake: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "20%": { transform: "translateY(-2%)" },
+          "40%": { transform: "translateY(2%)" },
+          "60%": { transform: "translateY(-1%)" },
+          "80%": { transform: "translateY(1%)" },
+        },
       },
     },
   },

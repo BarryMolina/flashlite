@@ -18,6 +18,8 @@ export function CardSwitcher(props: { cards: Card[] }) {
   const [flippedCards, setFlippedCards] = useState(
     Array<boolean>(numCards).fill(false)
   );
+  const [shuffleKey, setShuffleKey] = useState(Date.now());
+  const [shouldAnimate, setShouldAnimate] = useState(false);
 
   useEffect(() => {
     setFlippedCards(Array(numCards).fill(shouldFlip));
@@ -61,6 +63,8 @@ export function CardSwitcher(props: { cards: Card[] }) {
 
   function shuffleCards() {
     setCards(shuffle(cards));
+    if (!shouldAnimate) setShouldAnimate(true);
+    setShuffleKey(Date.now());
   }
 
   return (
@@ -74,12 +78,14 @@ export function CardSwitcher(props: { cards: Card[] }) {
           <ShuffleIcon />
         </IconButton>
       </div>
-      <FlashCard
-        flipped={flippedCards[selectedIndex]}
-        toggleFlipped={() => toggleFlipped(selectedIndex)}
-        key={selectedIndex}
-        card={cards[selectedIndex]}
-      />
+      <div className={shouldAnimate ? "animate-shake" : ""} key={shuffleKey}>
+        <FlashCard
+          flipped={flippedCards[selectedIndex]}
+          toggleFlipped={() => toggleFlipped(selectedIndex)}
+          key={selectedIndex}
+          card={cards[selectedIndex]}
+        />
+      </div>
       <div className="flex justify-center gap-8">
         <IconButton onClick={prev}>
           <PrevIcon />

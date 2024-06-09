@@ -5,7 +5,7 @@ export function IconButton(props: {
 }) {
   return (
     <button
-      className={`p-2 rounded-full${
+      className={`p-2 rounded-full transition${
         props.active ? " bg-rose-300" : " hover:bg-gray-50"
       }`}
       onClick={props.onClick}
