@@ -32,9 +32,41 @@ export function CardSwitcher(props: { cards: Card[] }) {
     setFlippedCards(Array(numCards).fill(shouldFlip));
   }, [shouldFlip]);
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const key = e.key;
+      (document.activeElement as HTMLElement).blur();
+      if (key === "ArrowLeft") {
+        prev();
+      } else if (key === "ArrowRight") {
+        next();
+      } else if (key === " ") {
+        toggleFlipped(selectedIndex);
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  });
+
+  function prev() {
+    setSelectedIndex(selectedIndex > 0 ? selectedIndex - 1 : numCards - 1);
+  }
+
+  function next() {
+    setSelectedIndex(selectedIndex < numCards - 1 ? selectedIndex + 1 : 0);
+  }
+
+  function toggleFlipped(index: number) {
+    const newCards = [...flippedCards];
+    newCards[index] = !flippedCards[index];
+    setFlippedCards(newCards);
+  }
+
   return (
     <div className="flex flex-col gap-4 items-center">
-      <div className="flex justify-between w-[500px]">
+      <div className="flex justify-between w-[500px] items-center">
         <IconButton
           active={shouldFlip}
           onClick={() => setShouldFlip(!shouldFlip)}
@@ -50,32 +82,16 @@ export function CardSwitcher(props: { cards: Card[] }) {
         </IconButton>
       </div>
       <div className="flex justify-center items-center gap-10">
-        <IconButton
-          onClick={() =>
-            setSelectedIndex(
-              selectedIndex > 0 ? selectedIndex - 1 : numCards - 1
-            )
-          }
-        >
+        <IconButton onClick={prev}>
           <PrevIcon />
         </IconButton>
         <FlashCard
           flipped={flippedCards[selectedIndex]}
-          toggleFlipped={() => {
-            const newCards = [...flippedCards];
-            newCards[selectedIndex] = !flippedCards[selectedIndex];
-            setFlippedCards(newCards);
-          }}
+          toggleFlipped={() => toggleFlipped(selectedIndex)}
           key={selectedIndex}
           card={cards[selectedIndex]}
         />
-        <IconButton
-          onClick={() =>
-            setSelectedIndex(
-              selectedIndex < numCards - 1 ? selectedIndex + 1 : 0
-            )
-          }
-        >
+        <IconButton onClick={next}>
           <NextIcon />
         </IconButton>
       </div>

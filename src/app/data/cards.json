@@ -34,6 +34,38 @@
       {
         "front": "P is sufficient for Q",
         "back": "P => Q"
+      },
+      {
+        "front": "If Q, then P",
+        "back": "Q => P"
+      },
+      {
+        "front": "P if Q",
+        "back": "Q => P"
+      },
+      {
+        "front": "Q only if P",
+        "back": "Q => P"
+      },
+      {
+        "front": "Q implies P",
+        "back": "Q => P"
+      },
+      {
+        "front": "P is implied by Q",
+        "back": "Q => P"
+      },
+      {
+        "front": "P whenever Q",
+        "back": "Q => P"
+      },
+      {
+        "front": "P is necessary for Q",
+        "back": "Q => P"
+      },
+      {
+        "front": "Q is sufficient for P",
+        "back": "Q => P"
       }
     ]
   }
