@@ -14,19 +14,10 @@ export function CardSwitcher(props: { cards: Card[] }) {
   const numCards = props.cards.length;
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [shouldFlip, setShouldFlip] = useState(false);
-  const [shouldShuffle, setShouldShuffle] = useState(false);
   const [cards, setCards] = useState(props.cards);
   const [flippedCards, setFlippedCards] = useState(
     Array<boolean>(numCards).fill(false)
   );
-
-  useEffect(() => {
-    if (shouldShuffle) {
-      setCards(shuffle(cards));
-    } else {
-      setCards(props.cards);
-    }
-  }, [shouldShuffle]);
 
   useEffect(() => {
     setFlippedCards(Array(numCards).fill(shouldFlip));
@@ -68,21 +59,18 @@ export function CardSwitcher(props: { cards: Card[] }) {
     setSelectedIndex(0);
   }
 
+  function shuffleCards() {
+    setCards(shuffle(cards));
+  }
+
   return (
     <div className="flex flex-col gap-4 max-w-[500px] w-full">
       <div className="flex justify-between items-center">
-        <IconButton
-          // active={shouldFlip}
-          // onClick={() => setShouldFlip(!shouldFlip)}
-          onClick={restart}
-        >
+        <IconButton onClick={restart}>
           <FlipIcon />
         </IconButton>
         <CardPagination currentPage={selectedIndex + 1} totalPages={numCards} />
-        <IconButton
-          active={shouldShuffle}
-          onClick={() => setShouldShuffle(!shouldShuffle)}
-        >
+        <IconButton onClick={shuffleCards}>
           <ShuffleIcon />
         </IconButton>
       </div>
