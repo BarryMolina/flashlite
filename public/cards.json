@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Conditional Statements",
+    "cards": [
+      {
+        "front": "If P, then Q",
+        "back": "P => Q"
+      },
+      {
+        "front": "Q if P",
+        "back": "P => Q"
+      },
+      {
+        "front": "P only if Q",
+        "back": "P => Q"
+      },
+      {
+        "front": "P implies Q",
+        "back": "P => Q"
+      },
+      {
+        "front": "Q is implied by P",
+        "back": "P => Q"
+      },
+      {
+        "front": "Q whenever P",
+        "back": "P => Q"
+      },
+      {
+        "front": "Q is necessary for P",
+        "back": "P => Q"
+      },
+      {
+        "front": "P is sufficient for Q",
+        "back": "P => Q"
+      },
+      {
+        "front": "If Q, then P",
+        "back": "Q => P"
+      },
+      {
+        "front": "P if Q",
+        "back": "Q => P"
+      },
+      {
+        "front": "Q only if P",
+        "back": "Q => P"
+      },
+      {
+        "front": "Q implies P",
+        "back": "Q => P"
+      },
+      {
+        "front": "P is implied by Q",
+        "back": "Q => P"
+      },
+      {
+        "front": "P whenever Q",
+        "back": "Q => P"
+      },
+      {
+        "front": "P is necessary for Q",
+        "back": "Q => P"
+      },
+      {
+        "front": "Q is sufficient for P",
+        "back": "Q => P"
+      }
+    ]
+  }
+]
