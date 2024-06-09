@@ -64,12 +64,17 @@ export function CardSwitcher(props: { cards: Card[] }) {
     setFlippedCards(newCards);
   }
 
+  function restart() {
+    setSelectedIndex(0);
+  }
+
   return (
     <div className="flex flex-col gap-4 max-w-[500px] w-full">
       <div className="flex justify-between items-center">
         <IconButton
-          active={shouldFlip}
-          onClick={() => setShouldFlip(!shouldFlip)}
+          // active={shouldFlip}
+          // onClick={() => setShouldFlip(!shouldFlip)}
+          onClick={restart}
         >
           <FlipIcon />
         </IconButton>
