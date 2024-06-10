@@ -9,6 +9,7 @@ import ShuffleIcon from "@/app/assets/icons/shuffle.svg";
 import PrevIcon from "@/app/assets/icons/prev.svg";
 import NextIcon from "@/app/assets/icons/next.svg";
 import { shuffle } from "../lib/shuffle";
+import { useWindowDimensions } from "../lib/useWindowDimensions";
 
 export function CardSwitcher(props: { cards: Card[] }) {
   const numCards = props.cards.length;
@@ -19,6 +20,7 @@ export function CardSwitcher(props: { cards: Card[] }) {
     Array<boolean>(numCards).fill(false)
   );
   const [animateShake, setAnimateShake] = useState(false);
+  const { width, height } = useWindowDimensions();
 
   useEffect(() => {
     setFlippedCards(Array(numCards).fill(shouldFlip));
@@ -65,25 +67,35 @@ export function CardSwitcher(props: { cards: Card[] }) {
     setAnimateShake(true);
   }
 
+  console.log("width", width);
+
   return (
-    <div className="flex flex-col gap-4 max-w-[500px] w-full">
-      <div className="flex justify-between items-center">
-        <IconButton onClick={restart}>
-          <FlipIcon />
-        </IconButton>
-        <CardPagination currentPage={selectedIndex + 1} totalPages={numCards} />
-        <IconButton onClick={shuffleCards}>
-          <ShuffleIcon />
-        </IconButton>
+    <div className="flex flex-col gap-4 w-full">
+      <div className="flex justify-center">
+        <div className="flex justify-between items-center max-w-[500px] w-full ">
+          <IconButton onClick={restart}>
+            <FlipIcon />
+          </IconButton>
+          <CardPagination
+            currentPage={selectedIndex + 1}
+            totalPages={numCards}
+          />
+          <IconButton onClick={shuffleCards}>
+            <ShuffleIcon />
+          </IconButton>
+        </div>
       </div>
-      <FlashCard
-        flipped={flippedCards[selectedIndex]}
-        toggleFlipped={() => toggleFlipped(selectedIndex)}
-        key={selectedIndex}
-        card={cards[selectedIndex]}
-        animateShake={animateShake}
-        onAnimationEnd={() => setAnimateShake(false)}
-      />
+      <div className="relative h-[300px]">
+        <FlashCard
+          position={width / 2}
+          flipped={flippedCards[selectedIndex]}
+          toggleFlipped={() => toggleFlipped(selectedIndex)}
+          key={selectedIndex}
+          card={cards[selectedIndex]}
+          animateShake={animateShake}
+          onAnimationEnd={() => setAnimateShake(false)}
+        />
+      </div>
       <div className="flex justify-center gap-8">
         <IconButton onClick={prev}>
           <PrevIcon />
