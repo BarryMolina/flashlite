@@ -34,6 +34,7 @@ export function CardSwitcher(props: { cards: Card[] }) {
     setFlippedCards(Array(numCards).fill(shouldFlip));
   }, [shouldFlip]);
 
+  // todo, use a ref or something so that listener doesn't have to be added and removed every time
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       const key = e.key;
@@ -50,7 +51,7 @@ export function CardSwitcher(props: { cards: Card[] }) {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [selectedIndex]);
 
   function prev() {
     setSelectedIndex(prevIndex);
@@ -93,34 +94,37 @@ export function CardSwitcher(props: { cards: Card[] }) {
       </div>
       <div className="relative h-[300px]">
         <FlashCard
-          position={-400}
+          position={-180}
           flipped={flippedCards[prevIndex]}
-          toggleFlipped={() => toggleFlipped(prevIndex)}
           key={prevIndex}
           card={cards[prevIndex]}
           animateShake={animateShake}
           animateSlide={animateSlide}
           onShakeEnd={() => setAnimateShake(false)}
+          onClick={prev}
+          zIndex={0}
         />
         <FlashCard
           position={width / 2}
           flipped={flippedCards[selectedIndex]}
-          toggleFlipped={() => toggleFlipped(selectedIndex)}
+          onClick={() => toggleFlipped(selectedIndex)}
           key={selectedIndex}
           card={cards[selectedIndex]}
           animateShake={animateShake}
           onShakeEnd={() => setAnimateShake(false)}
           animateSlide={animateSlide}
+          zIndex={2}
         />
         <FlashCard
-          position={2000}
+          position={width + 180}
           flipped={flippedCards[nextIndex]}
-          toggleFlipped={() => toggleFlipped(nextIndex)}
           key={nextIndex}
           card={cards[nextIndex]}
           animateShake={animateShake}
           onShakeEnd={() => setAnimateShake(false)}
           animateSlide={animateSlide}
+          onClick={next}
+          zIndex={1}
         />
       </div>
       <div className="flex justify-center gap-8">

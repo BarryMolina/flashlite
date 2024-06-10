@@ -4,11 +4,12 @@ import { CardSide } from "./CardSide";
 export function FlashCard(props: {
   card: Card;
   flipped: boolean;
-  toggleFlipped: () => void;
+  onClick?: () => void;
   animateShake?: boolean;
   onShakeEnd?: () => void;
   position?: number;
   animateSlide?: boolean;
+  zIndex?: number;
 }) {
   return (
     <div
@@ -20,6 +21,7 @@ export function FlashCard(props: {
           props.animateSlide ? ", left .5s ease-out" : ""
         }`,
         opacity: props.animateSlide ? 1 : 0,
+        zIndex: props.zIndex,
       }}
     >
       <div
@@ -37,10 +39,10 @@ export function FlashCard(props: {
             transform: props.flipped ? "rotateX(180deg)" : "rotateX(0)",
           }}
         >
-          <CardSide flipped={false} onClick={props.toggleFlipped}>
+          <CardSide flipped={false} onClick={props.onClick}>
             <h3 className="text-md sm:text-lg">{props.card.front}</h3>
           </CardSide>
-          <CardSide flipped={true} onClick={props.toggleFlipped}>
+          <CardSide flipped={true} onClick={props.onClick}>
             <h3 className="text-md sm:text-lg">{props.card.back}</h3>
           </CardSide>
         </div>
