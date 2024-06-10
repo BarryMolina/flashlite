@@ -20,7 +20,15 @@ export function CardSwitcher(props: { cards: Card[] }) {
     Array<boolean>(numCards).fill(false)
   );
   const [animateShake, setAnimateShake] = useState(false);
+  const [animateSlide, setAnimateSlide] = useState(false);
   const { width, height } = useWindowDimensions();
+  const prevIndex = selectedIndex > 0 ? selectedIndex - 1 : numCards - 1;
+  const nextIndex = selectedIndex < numCards - 1 ? selectedIndex + 1 : 0;
+
+  useEffect(() => {
+    // This useEffect avoids a server/client props mismatch error caused by `width` being unavailable on the server
+    if (width > 0 && !animateSlide) setAnimateSlide(true);
+  }, [width]);
 
   useEffect(() => {
     setFlippedCards(Array(numCards).fill(shouldFlip));
@@ -42,14 +50,14 @@ export function CardSwitcher(props: { cards: Card[] }) {
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  });
+  }, []);
 
   function prev() {
-    setSelectedIndex(selectedIndex > 0 ? selectedIndex - 1 : numCards - 1);
+    setSelectedIndex(prevIndex);
   }
 
   function next() {
-    setSelectedIndex(selectedIndex < numCards - 1 ? selectedIndex + 1 : 0);
+    setSelectedIndex(nextIndex);
   }
 
   function toggleFlipped(index: number) {
@@ -66,8 +74,6 @@ export function CardSwitcher(props: { cards: Card[] }) {
     setCards(shuffle(cards));
     setAnimateShake(true);
   }
-
-  console.log("width", width);
 
   return (
     <div className="flex flex-col gap-4 w-full">
@@ -87,13 +93,34 @@ export function CardSwitcher(props: { cards: Card[] }) {
       </div>
       <div className="relative h-[300px]">
         <FlashCard
+          position={-400}
+          flipped={flippedCards[prevIndex]}
+          toggleFlipped={() => toggleFlipped(prevIndex)}
+          key={prevIndex}
+          card={cards[prevIndex]}
+          animateShake={animateShake}
+          animateSlide={animateSlide}
+          onShakeEnd={() => setAnimateShake(false)}
+        />
+        <FlashCard
           position={width / 2}
           flipped={flippedCards[selectedIndex]}
           toggleFlipped={() => toggleFlipped(selectedIndex)}
           key={selectedIndex}
           card={cards[selectedIndex]}
           animateShake={animateShake}
-          onAnimationEnd={() => setAnimateShake(false)}
+          onShakeEnd={() => setAnimateShake(false)}
+          animateSlide={animateSlide}
+        />
+        <FlashCard
+          position={2000}
+          flipped={flippedCards[nextIndex]}
+          toggleFlipped={() => toggleFlipped(nextIndex)}
+          key={nextIndex}
+          card={cards[nextIndex]}
+          animateShake={animateShake}
+          onShakeEnd={() => setAnimateShake(false)}
+          animateSlide={animateSlide}
         />
       </div>
       <div className="flex justify-center gap-8">

@@ -6,21 +6,25 @@ export function FlashCard(props: {
   flipped: boolean;
   toggleFlipped: () => void;
   animateShake?: boolean;
-  onAnimationEnd?: () => void;
+  onShakeEnd?: () => void;
   position?: number;
+  animateSlide?: boolean;
 }) {
   return (
     <div
-      className={`absolute w-full max-w-[500px] h-[300px]`}
+      className={`absolute w-full max-w-[540px] h-[300px] px-5`}
       style={{
         left: props.position,
         transform: "translateX(-50%)",
-        transition: "left 1s ease-in",
+        transition: `opacity 350ms ease-out${
+          props.animateSlide ? ", left .5s ease-out" : ""
+        }`,
+        opacity: props.animateSlide ? 1 : 0,
       }}
     >
       <div
         className={`h-full w-full${props.animateShake ? " animate-shake" : ""}`}
-        onAnimationEnd={props.onAnimationEnd}
+        onAnimationEnd={props.onShakeEnd}
         style={{
           perspective: "2000px",
         }}
