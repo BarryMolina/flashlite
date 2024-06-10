@@ -5,9 +5,15 @@ export function FlashCard(props: {
   card: Card;
   flipped: boolean;
   toggleFlipped: () => void;
+  animateShake?: boolean;
+  onAnimationEnd?: () => void;
 }) {
   return (
-    <div style={{ perspective: "2000px" }}>
+    <div
+      className={props.animateShake ? "animate-shake" : ""}
+      onAnimationEnd={props.onAnimationEnd}
+      style={{ perspective: "2000px" }}
+    >
       <div
         className="min-h-[300px] relative"
         style={{
