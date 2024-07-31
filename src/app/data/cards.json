@@ -68,5 +68,335 @@
         "back": "Q => P"
       }
     ]
+  },
+  {
+    "id": 2,
+    "name": "Multiplication Tables",
+    "cards": [
+      {
+        "front": "1 x 1",
+        "back": "1"
+      },
+      {
+        "front": "1 x 2",
+        "back": "2"
+      },
+      {
+        "front": "1 x 3",
+        "back": "3"
+      },
+      {
+        "front": "1 x 4",
+        "back": "4"
+      },
+      {
+        "front": "1 x 5",
+        "back": "5"
+      },
+      {
+        "front": "1 x 6",
+        "back": "6"
+      },
+      {
+        "front": "1 x 7",
+        "back": "7"
+      },
+      {
+        "front": "1 x 8",
+        "back": "8"
+      },
+      {
+        "front": "1 x 9",
+        "back": "9"
+      },
+      {
+        "front": "2 x 1",
+        "back": "2"
+      },
+      {
+        "front": "2 x 2",
+        "back": "4"
+      },
+      {
+        "front": "2 x 3",
+        "back": "6"
+      },
+      {
+        "front": "2 x 4",
+        "back": "8"
+      },
+      {
+        "front": "2 x 5",
+        "back": "10"
+      },
+      {
+        "front": "2 x 6",
+        "back": "12"
+      },
+      {
+        "front": "2 x 7",
+        "back": "14"
+      },
+      {
+        "front": "2 x 8",
+        "back": "16"
+      },
+      {
+        "front": "2 x 9",
+        "back": "18"
+      },
+      {
+        "front": "3 x 1",
+        "back": "3"
+      },
+      {
+        "front": "3 x 2",
+        "back": "6"
+      },
+      {
+        "front": "3 x 3",
+        "back": "9"
+      },
+      {
+        "front": "3 x 4",
+        "back": "12"
+      },
+      {
+        "front": "3 x 5",
+        "back": "15"
+      },
+      {
+        "front": "3 x 6",
+        "back": "18"
+      },
+      {
+        "front": "3 x 7",
+        "back": "21"
+      },
+      {
+        "front": "3 x 8",
+        "back": "24"
+      },
+      {
+        "front": "3 x 9",
+        "back": "27"
+      },
+      {
+        "front": "4 x 1",
+        "back": "4"
+      },
+      {
+        "front": "4 x 2",
+        "back": "8"
+      },
+      {
+        "front": "4 x 3",
+        "back": "12"
+      },
+      {
+        "front": "4 x 4",
+        "back": "16"
+      },
+      {
+        "front": "4 x 5",
+        "back": "20"
+      },
+      {
+        "front": "4 x 6",
+        "back": "24"
+      },
+      {
+        "front": "4 x 7",
+        "back": "28"
+      },
+      {
+        "front": "4 x 8",
+        "back": "32"
+      },
+      {
+        "front": "4 x 9",
+        "back": "36"
+      },
+      {
+        "front": "5 x 1",
+        "back": "5"
+      },
+      {
+        "front": "5 x 2",
+        "back": "10"
+      },
+      {
+        "front": "5 x 3",
+        "back": "15"
+      },
+      {
+        "front": "5 x 4",
+        "back": "20"
+      },
+      {
+        "front": "5 x 5",
+        "back": "25"
+      },
+      {
+        "front": "5 x 6",
+        "back": "30"
+      },
+      {
+        "front": "5 x 7",
+        "back": "35"
+      },
+      {
+        "front": "5 x 8",
+        "back": "40"
+      },
+      {
+        "front": "5 x 9",
+        "back": "45"
+      },
+      {
+        "front": "6 x 1",
+        "back": "6"
+      },
+      {
+        "front": "6 x 2",
+        "back": "12"
+      },
+      {
+        "front": "6 x 3",
+        "back": "18"
+      },
+      {
+        "front": "6 x 4",
+        "back": "24"
+      },
+      {
+        "front": "6 x 5",
+        "back": "30"
+      },
+      {
+        "front": "6 x 6",
+        "back": "36"
+      },
+      {
+        "front": "6 x 7",
+        "back": "42"
+      },
+      {
+        "front": "6 x 8",
+        "back": "48"
+      },
+      {
+        "front": "6 x 9",
+        "back": "54"
+      },
+      {
+        "front": "7 x 1",
+        "back": "7"
+      },
+      {
+        "front": "7 x 2",
+        "back": "14"
+      },
+      {
+        "front": "7 x 3",
+        "back": "21"
+      },
+      {
+        "front": "7 x 4",
+        "back": "28"
+      },
+      {
+        "front": "7 x 5",
+        "back": "35"
+      },
+      {
+        "front": "7 x 6",
+        "back": "42"
+      },
+      {
+        "front": "7 x 7",
+        "back": "49"
+      },
+      {
+        "front": "7 x 8",
+        "back": "56"
+      },
+      {
+        "front": "7 x 9",
+        "back": "63"
+      },
+      {
+        "front": "8 x 1",
+        "back": "8"
+      },
+      {
+        "front": "8 x 2",
+        "back": "16"
+      },
+      {
+        "front": "8 x 3",
+        "back": "24"
+      },
+      {
+        "front": "8 x 4",
+        "back": "32"
+      },
+      {
+        "front": "8 x 5",
+        "back": "40"
+      },
+      {
+        "front": "8 x 6",
+        "back": "48"
+      },
+      {
+        "front": "8 x 7",
+        "back": "56"
+      },
+      {
+        "front": "8 x 8",
+        "back": "64"
+      },
+      {
+        "front": "8 x 9",
+        "back": "72"
+      },
+      {
+        "front": "9 x 1",
+        "back": "9"
+      },
+      {
+        "front": "9 x 2",
+        "back": "18"
+      },
+      {
+        "front": "9 x 3",
+        "back": "27"
+      },
+      {
+        "front": "9 x 4",
+        "back": "36"
+      },
+      {
+        "front": "9 x 5",
+        "back": "45"
+      },
+      {
+        "front": "9 x 6",
+        "back": "54"
+      },
+      {
+        "front": "9 x 7",
+        "back": "63"
+      },
+      {
+        "front": "9 x 8",
+        "back": "72"
+      },
+      {
+        "front": "9 x 9",
+        "back": "81"
+      }
+    ]
   }
 ]
