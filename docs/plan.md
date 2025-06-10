@@ -24,47 +24,97 @@ FlashLite is designed for:
 - Users can create an account using email/password
 - Users can sign in with Google
 - Users can reset their password
+- Users can manage their profile information
 
 ### Deck Management
 
-- Users can create new flashcard decks
-- Users can edit existing decks
-- Users can delete decks
-- Users can organize their decks
+- Users can view and organize their decks
+  - See deck titles and card counts
+  - Quick access to study any deck
   - Drag and drop to reorder decks
   - Pin decks to highlight them at the top
+- Users can manage deck settings
+  - Set or modify deck title
   - Toggle study reminders for each deck
+- Users can create and edit decks
+  - Add cards manually
+    - Enter front content
+    - Enter back content
+    - Add cards one at a time
+    - Preview cards before saving
+  - Generate cards using AI
+    - Enter a topic or concept
+    - Specify number of cards to generate
+    - Review and edit generated cards
+    - Save selected cards to deck
+  - Edit existing cards
+    - Modify front content
+    - Modify back content
+    - Preview changes before saving
+  - Remove cards from the deck
+  - Reorder cards within the deck
+- Users can start studying any deck
+  - Begin a study session
+  - See last study position
+  - View cards due for review
+- Users can delete decks
 
-### Deck View
+### Deck Analytics
 
-- Users can access a detailed deck view
-  - Edit deck title
-  - View total card count
-  - Manage deck notifications
-  - View encouraging progress message
+- Users can track their learning progress
+  - View study history
+  - Track learning progress over time
+  - See next recommended study time
+  - Monitor cards in review queue
+  - View encouraging progress messages
     - Fun, gamified text that reflects study performance
     - Updates based on recent study activity
     - Celebrates achievements and progress
     - Motivates continued study
-- Users can manage cards within a deck
-  - View all cards in the deck
-  - Add new cards
-    - Manual card creation
-    - AI-assisted card generation from prompts
-  - Remove cards
-- Users can view deck statistics
-  - Study history
-  - Learning progress over time
-  - Next study time
-  - Number of cards in review queue
-  - Additional metrics (to be defined with spaced learning algorithm)
+  - Access additional learning metrics
 
-### Card Management
+## User Stories
 
-- Users can add cards to decks
-- Users can edit cards
-- Users can delete cards
-- Users can reorder cards within a deck
+### User Management
+
+- As a new user, I want to create an account so I can start using the app
+- As a user, I want to sign in with Google for convenience
+- As a user, I want to reset my password if I forget it
+- As a user, I want to manage my profile information
+
+### Deck Management
+
+- As a user, I want to see and organize all my decks
+  - I want to see deck titles and how many cards they contain
+  - I want to start studying any deck quickly
+  - I want to organize my decks by dragging and dropping
+  - I want to pin important decks to the top
+- As a user, I want to manage my deck settings
+  - I want to set or update the deck title
+  - I want to toggle study reminders for each deck
+- As a user, I want to create and edit my decks
+  - I want to add cards manually by entering front and back content
+  - I want to preview my cards before saving them
+  - I want to generate cards using AI when I need help
+  - I want to review and edit AI-generated cards before saving them
+  - I want to modify existing cards
+  - I want to remove cards I no longer need
+  - I want to reorder cards within the deck
+- As a user, I want to start studying any deck
+  - I want to begin a study session
+  - I want to see my last study position
+  - I want to know which cards need review
+- As a user, I want to delete decks I no longer need
+
+### Deck Analytics
+
+- As a user, I want to track my learning progress
+  - I want to see my study history
+  - I want to see how my learning has improved
+  - I want to know when I should study next
+  - I want to see how many cards need review
+  - I want to see encouraging messages about my progress
+  - I want to feel motivated by my learning journey
 
 ### Study Experience
 
@@ -82,55 +132,14 @@ FlashLite is designed for:
 - Users can track their study progress
 - Users can review their study history
 
-## User Stories
+### Pricing
 
-### Authentication
-
-- As a new user, I want to create an account so I can start using the app
-- As a user, I want to sign in with Google for convenience
-- As a user, I want to reset my password if I forget it
-
-### Deck Management
-
-- As a user, I want to create a new deck to organize my study materials
-- As a user, I want to edit my decks to keep them up to date
-- As a user, I want to organize my decks
-  - I want to drag and drop decks to reorder them
-  - I want to pin important decks to the top
-  - I want to toggle study reminders for each deck
-
-### Deck View
-
-- As a user, I want to manage my deck details
-  - I want to edit the deck title
-  - I want to see how many cards are in the deck
-  - I want to manage study reminders for this deck
-  - I want to see encouraging messages about my progress
-- As a user, I want to manage the cards in my deck
-  - I want to see all cards in the deck
-  - I want to add new cards manually
-  - I want to generate cards using AI prompts
-  - I want to remove cards
-- As a user, I want to track my progress with this deck
-  - I want to see my study history
-  - I want to see how my learning has improved
-  - I want to know when I should study next
-  - I want to see how many cards need review
-  - I want to feel motivated by my progress
-
-### Study Experience
-
-- As a user, I want to study my cards to learn the material
-  - I want to focus solely on the current card without distractions
-  - I want to know how many cards I have left to study
-  - I want to flip cards with a satisfying animation
-  - I want to shuffle my deck when I need to
-  - I want to reset my study session to start over
-  - I want to mark cards as learned by swiping right
-  - I want to mark cards for review by swiping left
-  - I want smooth animations for all card interactions
-- As a user, I want to track my progress to see how I'm improving
-- As a user, I want to review my study history to identify areas for improvement
+- As a new user, I want to try the app for free to see if it meets my needs
+- As a free user, I want to understand my usage limits
+- As a free user, I want to easily upgrade to premium when I need more features
+- As a premium user, I want to get the most value from my subscription
+- As a user, I want to manage my subscription settings
+- As a user, I want to cancel my subscription if I no longer need it
 
 ## Non-Functional Requirements
 
@@ -158,6 +167,8 @@ FlashLite is designed for:
   - Notifications should be manageable and non-intrusive
   - Progress messages should be encouraging but not distracting
   - AI card generation should be simple and intuitive
+  - Card creation should be straightforward and efficient
+  - Card preview should be clear and helpful
 - The app should be intuitive to use
 - The app should work well on different screen sizes
 - The app should provide minimal, clear feedback for user actions
@@ -185,3 +196,41 @@ These features may be considered in the future, but only if they can be implemen
 - Simple study statistics (if they don't distract from learning)
 - Minimal AI assistance (if it can be implemented without cluttering the interface)
 - Basic study reminders (if they can be implemented without being intrusive)
+
+## Pricing
+
+### Free Tier ($0/month)
+
+- Up to 3 decks
+- Up to 100 cards per deck
+- Basic study features
+  - Card flipping
+  - Swipe gestures
+  - Progress tracking
+  - Study history
+- Limited AI features
+  - 5 AI card generations per month
+  - Basic prompt suggestions
+- No media uploads
+- Community support
+
+### Premium Tier ($5/month)
+
+- Unlimited decks
+- Unlimited cards per deck
+- All study features
+  - Advanced progress analytics
+  - Custom study schedules
+  - Priority review queue
+  - Detailed learning metrics
+- Enhanced AI features
+  - 50 AI card generations per month
+  - Advanced prompt suggestions
+  - AI-powered study recommendations
+  - Custom AI prompt templates
+- Media support
+  - Image uploads for cards
+  - Audio uploads for cards
+  - Cloud storage for media
+- Priority support
+- Early access to new features
